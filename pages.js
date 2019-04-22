@@ -1,4 +1,4 @@
 var pages = [
     'index.html',
-    'why.html'
+    'contents.html'
 ];
