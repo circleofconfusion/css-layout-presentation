@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="pages.js"></script>
+        <script src="navigation.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <main class="standard">
+            <h1 class="border-bottom">Prehistory: Table Layout</h1>
+            <style>
+                table {
+                    margin: 0;
+                    padding: 0;
+                    background-color: #eee;
+                    color: #000;
+                    background-image: url('images/tile_texture_stones_smooth_imprints_bright_white_180x180.jpg');
+                }
+
+                table table {
+                    background: transparent;
+                }
+
+                table a {
+                    text-decoration: none;
+                }
+
+                table a:hover, table a:focus {
+                    text-decoration: underline;
+                }
+
+                td {
+                    margin: 0;
+                    padding: 0;
+                    vertical-align: top;
+                }
+
+                p {
+                    margin-top: 0;
+                }
+            </style>
+            <table style="border: 1px solid #eee; width: 100%;">
+                <tr>
+                    <td colspan="2">
+                        <marquee scrollamount="15" style="font-size: 48pt; font-weight: bold;">Our Corporate Website</marquee>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- navigation -->
+                    <td>
+                        <ul style="list-style: none; margin: 0; padding: 5px;">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </td>
+                    <!-- content columns -->
+                    <td>
+                        <table cellspacing=10>
+                            <tr>
+                                <td>
+                                    <p>
+                                        Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- footer -->
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                        <p>
+                            <img src="images/valid-html40.png" alt="valid html 4.0"/>
+                            &copy;1998 All rights reserved
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </body>
+</html>
