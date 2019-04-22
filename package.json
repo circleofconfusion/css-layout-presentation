@@ -1,0 +1,22 @@
+{
+  "name": "css-layout-presentation",
+  "version": "1.0.0",
+  "description": "Presentation of CSS layout at GSFC April 2019.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/circleofconfusion/css-layout-presentation.git"
+  },
+  "author": "Shane Knudsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/circleofconfusion/css-layout-presentation/issues"
+  },
+  "homepage": "https://github.com/circleofconfusion/css-layout-presentation#readme",
+  "dependencies": {
+    "highlight.js": "^9.15.6"
+  }
+}
