@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="pages.js"></script>
+        <script src="navigation.js"></script>
+        <link rel="stylesheet" href="style.css" />
+
+        <style>
+            .modal-background {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                background-color: rgba(0,0,0,0.5);
+            }
+
+            .modal {
+                width: 400px;
+                padding: 8px;
+                border: 2px solid #000;
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                background-color: #eee;
+                border-radius: 10px;
+                font-size: .8em;
+                box-shadow: 1px 1px 4px 4px rgba(0,0,0,0.5)
+            }
+
+            .modal h3 {
+                border-bottom: #000 1px solid;
+                margin: 0 0 10px;
+            }
+            
+            .modal input {
+                margin-left: 100px;
+            }
+            
+            .modal label {
+                position: absolute;
+            }
+
+            .modal input[type="number"] {
+                padding: 3px 5px;
+                width: 30%;
+                border-radius: 5px;
+                background-color: #eee;
+                color: #000;
+                line-height: 1.8em;
+            }
+            
+            .modal button {
+                padding: 5px 8px;
+                border-radius: 5px;
+                border: 1px solid #000;
+            }
+
+            .modal p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main class="standard">
+            <h1 class="border-bottom"><code>absolute</code> Positioning</h1>
+            <section style="background: #eee; color: #28292e; position: relative;">
+                <p>
+                    Percolator foam caffeine est, in chicory to go galão cup beans, redeye cultivar, variety, robusta turkish, latte chicory, ristretto extraction robusta at organic lungo arabica. Steamed, mazagran frappuccino, pumpkin spice eu coffee viennese bar cream, so, galão turkish, crema aged sweet est affogato caramelization. Cream, arabica coffee, to go, arabica black, plunger pot crema, cup single origin plunger pot robust cream café au lait. Mug coffee, single origin espresso blue mountain as white half and half that, eu bar steamed, beans trifecta half and half a, strong kopi-luwak mug wings coffee viennese robust. Id cappuccino cup con panna so half and half saucer siphon single shot café au lait medium, aftertaste in, filter espresso, flavour filter saucer foam froth. Mug grinder, sugar extraction chicory caffeine cup acerbic, latte ristretto aftertaste, kopi-luwak, shop turkish aromatic, cultivar cup macchiato blue mountain a carajillo.
+                </p>
+                <p>
+                    Crema seasonal cream cinnamon rich mug flavour, black robust id medium cultivar dripper grounds, qui acerbic est coffee fair trade ristretto chicory. Crema, id cappuccino extra so caffeine, espresso barista as, cream ut redeye cup extraction saucer caffeine half and half est filter. Cup, java dark steamed cortado, percolator, medium whipped body flavour, mazagran blue mountain white café au lait steamed. Caramelization, that breve, french press aftertaste french press et macchiato spoon, mug and, kopi-luwak aged, turkish pumpkin spice in brewed skinny. Acerbic, macchiato strong filter mug, froth single shot decaffeinated aroma cup fair trade lungo spoon, mazagran so flavour aromatic carajillo. Froth coffee, cinnamon brewed, mazagran id kopi-luwak strong, steamed eu, roast a acerbic single origin, carajillo, est redeye kopi-luwak galão spoon.
+                </p>
+                <div class="modal-background">
+                    <section class="modal">
+                        <form>
+                            <h3>Coffee</h3>
+                            <p>
+                                <label for="shots">Shots</label>
+                                <input type="number" id="shots">
+                            </p>
+                            <p>
+                                <label for="cream">Cream</label>
+                                <input type="checkbox" id="cream">
+                            </p>
+                            <p>
+                                <label for="sugar">Sugar</label>
+                                <input type="checkbox" id="sugar">
+                            </p>
+                            <p>
+                                <button>Submit</button>
+                            </p>
+                        </form>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
