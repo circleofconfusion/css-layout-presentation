@@ -9,6 +9,7 @@ var pages = [
     'positioning-absolute.html',
     'positioning-example-modal.html',
     'media-query-form.html',
+    'flex-image-gallery.html',
     'grid-image-cards.html',
     'grid-scaling-hero.html',
     'grid-hanafuda.html',

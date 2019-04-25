@@ -48,6 +48,7 @@ main.standard {
 
 main.standard h1 {
     position: sticky;
+    width: 100%;
     margin-top: 0;
     top: 0;
     left: 0;
