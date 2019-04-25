@@ -3,5 +3,13 @@ var pages = [
     'contents.html',
     'history-table-layout.html',
     'history-table-layout-advantages.html',
-    'history-table-layout-disadvantages.html'
+    'history-table-layout-disadvantages.html',
+    'positioning-title.html',
+    'positioning-types.html',
+    'positioning-absolute.html',
+    'positioning-example-modal.html',
+    'media-query-form.html',
+    'grid-image-cards.html',
+    'grid-scaling-hero.html',
+    'grid-hanafuda.html',
 ];
