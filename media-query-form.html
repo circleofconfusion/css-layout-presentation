@@ -12,16 +12,13 @@
             background: #eee;
             color: #28292e;
             position: relative;
-            padding: 5px 5px 5px 150px;
+            display: grid;
+            grid-template-columns: 150px 1fr;
         }
 
         nav {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 150px;
             padding: 0;
+            box-shadow: 2px 0 2px 2px rgba(0,0,0, 0.5);
         }
 
         ul {
@@ -46,6 +43,7 @@
             grid-template-columns: min-content 1fr;
             grid-template-rows: min-content min-content 100px min-content;
             grid-gap: 10px;
+            margin: 5px 10px;
         }
 
         input,
@@ -65,13 +63,14 @@
 
         @media (max-width: 768px) {
             section {
-                padding: 5px;
+                grid-template-columns: 1fr;
+                grid-template-rows: min-content 1fr;
             }
 
             nav {
-                position: static;
-                width: auto;
-                border-bottom: 1px solid #000;
+                margin: 0;
+                width: 100%;
+                box-shadow: 0 2px 2px 2px rgba(0,0,0, 0.5);
             }
 
             li {
@@ -112,17 +111,19 @@
                 </ul>
             </nav>
 
-            <h2>Contact Us</h2>
+            <div>
+                <h2>Contact Us</h2>
 
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" />
-                <label for="email">Email</label>
-                <input type="email" id="email">
-                <label for="message">Message</label>
-                <textarea id="message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" />
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
 </body>
