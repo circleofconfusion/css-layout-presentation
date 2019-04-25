@@ -2,7 +2,7 @@ document.addEventListener('keyup', function(evt) {
     if (evt.keyCode == 32 || evt.keyCode == 39) {
         pageForward();
     }
-    else if (evt.keyCode == 8 || evt.keyCode == 37) {
+    else if (evt.keyCode == 37) {
         evt.preventDefault();
         evt.stopImmediatePropagation();
         pageBackward();
