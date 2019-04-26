@@ -8,6 +8,8 @@ var pages = [
     'positioning-types.html',
     'positioning-absolute.html',
     'positioning-example-modal.html',
+    'media-query-title.html',
+    'media-query-types.html',
     'media-query-form.html',
     'flex-image-gallery.html',
     'grid-image-cards.html',
