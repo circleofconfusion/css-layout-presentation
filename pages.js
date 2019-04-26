@@ -13,4 +13,10 @@ var pages = [
     'grid-image-cards.html',
     'grid-scaling-hero.html',
     'grid-hanafuda.html',
+    'resources-learning-more.html',
+    'jen-simmons.html',
+    'rachel-andrew.html',
+    'chris-coyier.html',
+    'layout-links.html',
+    'questions.html'
 ];
