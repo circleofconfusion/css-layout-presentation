@@ -5,7 +5,7 @@
     <script src="pages.js"></script>
     <script src="navigation.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Media Query Form</title>
+    <title>Flexbox Image Gallery</title>
 
     <style>
         
@@ -21,16 +21,20 @@
         a {
             display: block;
             flex: 0 1 400px;
+            height: 600px;
             overflow: hidden;
-            border: 3px #fff solid;
+            border: 3px #eee solid;
+            border-right: none;
+        }
+
+        a:last-child {
+            border-right: 3px #eee solid;
         }
 
         a:hover,
         a:focus {
-            flex: 0 0 400px;
+            flex: 0 0 auto;
         }
-
-        img {}
     </style>
 </head>
 
