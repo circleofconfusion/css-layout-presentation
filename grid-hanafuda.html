@@ -51,35 +51,17 @@
             justify-items: center;
         }
 
-        @media (orientation: landscape) {
-            header {
-                width: calc(var(--horiz-card-height) *.58 * 16 + 65px);
-            }
-
-            main {
-                height: calc(100vh - 20px - 3em);
-                width: calc(var(--horiz-card-height) *.58 * 16 + 65px);
-                grid-template-columns: repeat(16, calc(100vh *.58 / 6 - 20px));
-                grid-template-rows: repeat(2, var(--horiz-card-height)) 1fr var(--horiz-card-height) 1fr repeat(2, var(--horiz-card-height));
-                grid-template-areas:
-                    ". . . . p2h8       p2h7        p2h6        p2h5        p2h4        p2h3        p2h2        p2h1 . . . ."
-                    "p2trash    p2trash     p2trash     p2trash  p2animal   p2animal    p2animal    p2animal   p2ribbon    p2ribbon    p2ribbon    p2ribbon p2bright    p2bright    p2bright    p2bright"
-                    ". . . . . . . . . . . . . . . ."
-                    ". stock      stock       table1 table2 table3 table4  table5  table6 table7 table8 table9 table10 table11 table12 ."
-                    ". . . . . . . . . . . . . . . ."
-                    "p1bright p1bright p1bright p1bright p1ribbon p1ribbon p1ribbon p1ribbon p1animal   p1animal    p1animal    p1animal p1trash    p1trash     p1trash     p1trash"
-                    ". . . . p1h1 p1h2 p1h3 p1h4 p1h5 p1h6 p1h7 p1h8 . . . .";
-            }
-        }
-
         .card {
             display: inline-block;
-            height: var(--vert-card-height);
-            box-sizing: border-box;
+            border: 5px solid rgb(56, 42, 20);
+            height: calc(var(--vert-card-height) - 10px);
+            width: calc(var(--vert-card-height * .53));
+            overflow: hidden;
         }
 
-        img.card {
-            border: 5px solid rgb(56, 42, 20);
+        .card>img {
+            height: 100%;
+            width: calc(var(--vert-card-height * .53));
         }
 
         .card-back {
@@ -87,35 +69,34 @@
             width: 100%;
         }
 
-        @media (orientation: landscape) {
-            .card {
-                height: calc(var(--horiz-card-height));
-                width: calc(var(--horiz-card-height) * .55);
-            }
-        }
-
         .stock {
             grid-area: stock;
         }
 
-        .area.bright>img.card,
-        .area.ribbon>img.card {
-            margin-left: -10%;
+        .area {
+            max-width: 100%;
+            min-width: 0;
         }
 
-        .area.bright>img:first-child,
-        .area.ribbon>img:first-child {
-            margin-left: 0;
+        .area-wrapper {
+            display: flex;
         }
 
-        .area.animal>img.card,
-        .area.trash>img.card {
-            margin-left: -20%;
+        .area-wrapper>div {
+            flex: 0 1 auto;
+            overflow: hidden;
         }
 
-        .area.animal>img:first-child,
-        .area.trash>img:first-child {
-            margin-left: 0;
+        .area-wrapper>div:hover {
+            overflow: visible;
+        }
+
+        .area-wrapper .card {
+            border-right: none;
+        }
+
+        .area-wrapper .card:last-child {
+            border-right: 5px solid rgb(56, 42, 20);
         }
 
         .stock {
@@ -143,6 +124,30 @@
         }
 
         @media (orientation: landscape) {
+            header {
+                width: calc(var(--horiz-card-height) *.53 * 16 + 60px);
+            }
+
+            main {
+                height: calc(100vh - 20px - 3em);
+                width: calc(var(--horiz-card-height) * .53 * 16 + 150px + 160px);
+                grid-template-columns: repeat(16, calc(100vh *.55 / 6 ));
+                grid-template-rows: repeat(2, var(--horiz-card-height)) 1fr var(--horiz-card-height) 1fr repeat(2, var(--horiz-card-height));
+                grid-template-areas:
+                    ". . . . p2h8       p2h7        p2h6        p2h5        p2h4        p2h3        p2h2        p2h1 . . . ."
+                    "p2trash    p2trash     p2trash     p2trash  p2animal   p2animal    p2animal    p2animal   p2ribbon    p2ribbon    p2ribbon    p2ribbon p2bright    p2bright    p2bright    p2bright"
+                    ". . . . . . . . . . . . . . . ."
+                    ". stock      stock       table1 table2 table3 table4  table5  table6 table7 table8 table9 table10 table11 table12 ."
+                    ". . . . . . . . . . . . . . . ."
+                    "p1bright p1bright p1bright p1bright p1ribbon p1ribbon p1ribbon p1ribbon p1animal   p1animal    p1animal    p1animal p1trash    p1trash     p1trash     p1trash"
+                    ". . . . p1h1 p1h2 p1h3 p1h4 p1h5 p1h6 p1h7 p1h8 . . . .";
+            }
+
+            .card {
+                height: calc(var(--horiz-card-height) - 10px);
+                width: calc(var(--horiz-card-height) * .53);
+            }
+
             .stock-card {
                 height: var(--horiz-card-height);
                 width: calc(var(--horiz-card-height) * .53);
@@ -165,16 +170,28 @@
         <div class="card-back" style="grid-area: p2h2"></div>
         <div class="area trash" style="grid-area: p2trash;"></div>
         <div class="area ribbon" style="grid-area: p2ribbon;">
-            <img class="card" style="grid-area: table2" src="images/cards/10.png" />
-            <img class="card" style="grid-area: table3" src="images/cards/43.png" />
-            <img class="card" style="grid-area: table3" src="images/cards/22.png" />
+            <div class="card">
+                <img src="images/cards/10.png" />
+            </div>
+            <div class="card">
+                <img src="images/cards/43.png" />
+            </div>
+            <div class="card">
+                <img src="images/cards/22.png" />
+            </div>
         </div>
         <div class="area animal" style="grid-area: p2animal;">
-            <img src="images/cards/05.png" alt="" class="card" />
+            <div class="card">
+                <img src="images/cards/05.png" alt="" />
+            </div>
         </div>
-        <div class="area bright " style="grid-area: p2bright;">
-            <img src="images/cards/01.png" alt="" class="card" />
-            <img src="images/cards/09.png" alt="" class="card" />
+        <div class="area bright" style="grid-area: p2bright;">
+            <div class="card">
+                <img src="images/cards/01.png" alt="" />
+            </div>
+            <div class="card">
+                <img src="images/cards/09.png" alt="" />
+            </div>
         </div>
         <div class="stock">
             <div class="stock-card">
@@ -183,24 +200,54 @@
                 </div>
             </div>
         </div>
-        <img class="card" style="grid-area: table1" src="images/cards/03.png" />
-        <img class="card" style="grid-area: table2" src="images/cards/23.png" />
-        <img class="card" style="grid-area: table3" src="images/cards/34.png" />
-        <img class="card" style="grid-area: table4" src="images/cards/36.png" />
-        <img class="card" style="grid-area: table5" src="images/cards/02.png" />
-        <img class="card" style="grid-area: table6" src="images/cards/21.png" />
-        <img class="card" style="grid-area: table7" src="images/cards/32.png" />
-        <img class="card" style="grid-area: table8" src="images/cards/17.png" />
-        <img class="card" style="grid-area: table9" src="images/cards/40.png" />
+
+        <div class="card" style="grid-area: table1">
+            <img src="images/cards/34.png" />
+        </div>
+        <div class="card" style="grid-area: table2">
+            <img src="images/cards/36.png" />
+        </div>
+        <div class="card" style="grid-area: table3">
+            <img src="images/cards/02.png" />
+        </div>
+        <div class="card" style="grid-area: table4">
+            <img src="images/cards/21.png" />
+        </div>
+        <div class="card" style="grid-area: table5">
+            <img src="images/cards/17.png" />
+        </div>
+        <div class="card" style="grid-area: table6">
+            <img src="images/cards/40.png" />
+        </div>
+
         <div class="area bright" style="grid-area: p1bright;">
-            <img class="card" style="grid-area: table9" src="images/cards/29.png" />
+            <div class="card">
+                <img src="images/cards/29.png" />
+            </div>
         </div>
         <div class="area animal" style="grid-area: p1animal;"></div>
         <div class="area ribbon" style="grid-area: p1ribbon;"></div>
         <div class="area trash" style="grid-area: p1trash;">
-            <img class="card" src="images/cards/11.png" />
-            <img class="card" src="images/cards/12.png" />
-            <img class="card" src="images/cards/07.png" />
+            <div class="area-wrapper">
+                <div class="card">
+                    <img src="images/cards/32.png" />
+                </div>
+                <div class="card">
+                    <img src="images/cards/03.png" />
+                </div>
+                <div class="card">
+                    <img src="images/cards/23.png" />
+                </div>
+                <div class="card">
+                    <img src="images/cards/11.png" />
+                </div>
+                <div class="card">
+                    <img src="images/cards/12.png" />
+                </div>
+                <div class="card">
+                    <img src="images/cards/07.png" />
+                </div>
+            </div>
         </div>
         <div class="card-back" style="grid-area: p1h1"></div>
         <div class="card-back" style="grid-area: p1h2"></div>
