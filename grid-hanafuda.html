@@ -8,13 +8,12 @@
     <script src="navigation.js"></script>
     <style>
         :root {
-            --vert-grid-height: calc(100vh - 65px); /* accounts for heading and margins */
-            --vert-grid-width: calc(var(--vert-grid-height) * .58);
-            --vert-card-width: calc(var(--vert-grid-height) / 8 * .58 - 10px);
-            --vert-card-height: calc(100vh / 8 - 50px);
+            --vert-grid-height: calc(100vh - 100px); /* accounts for heading and margins */
+            --vert-card-height: calc(100vh / 11);
+            --vert-card-width: calc(var(--vert-card-height) * .58 - 10px);
 
             --horiz-card-width: calc(100vw / 16 - 15px);
-            --horiz-card-height: calc(var(--horiz-card-width) * 1.7);
+            --horiz-card-height: calc(var(--horiz-card-width) * 1.68);
         }
 
         html,
@@ -37,20 +36,21 @@
         main {
             display: grid;
             height: var(--vert-grid-height);
-            width: var(--vert-grid-width);
-            grid-template-columns: repeat(8, var(--vert-card-width));
-            grid-template-rows: repeat(3, var(--vert-card-height)) 1fr repeat(2, var(--vert-card-height)) 1fr repeat(3, var(--vert-card-height));
+            /* width: var(--vert-grid-width); */
+            grid-template-columns: repeat(8, 1fr);
+            /* grid-template-rows: repeat(3, var(--vert-card-height)) 1fr repeat(2, var(--vert-card-height)) 1fr repeat(3, var(--vert-card-height)); */
+            grid-template-rows: repeat(3, 3fr) 1fr repeat(2, 3fr) 1fr repeat(3, 3fr);
             grid-template-areas:
                 "p2h8       p2h7        p2h6        p2h5        p2h4        p2h3        p2h2        p2h1"
                 "p2trash    p2trash     p2trash     p2trash     p2ribbon    p2ribbon    p2ribbon    p2ribbon"
                 "p2animal   p2animal    p2animal    p2animal    p2bright    p2bright    p2bright    p2bright"
                 ". . . . . . . ."
-                "stock      stock       table1 table2 table3 table4  table5  table6"
-                "stock stock table7 table8 table9 table10 table11 table12"
+                "stock      stock       table1      table3      table5      table7      table9      table11"
+                "stock      stock       table2      table4      table6      table8      table10     table12"
                 ". . . . . . . ."
-                "p1bright p1bright p1bright p1bright p1animal   p1animal    p1animal    p1animal"
-                "p1ribbon p1ribbon p1ribbon p1ribbon p1trash    p1trash     p1trash     p1trash"
-                "p1h1 p1h2 p1h3 p1h4 p1h5 p1h6 p1h7 p1h8";
+                "p1bright   p1bright    p1bright    p1bright    p1animal    p1animal    p1animal    p1animal"
+                "p1ribbon   p1ribbon    p1ribbon    p1ribbon    p1trash     p1trash     p1trash     p1trash"
+                "p1h1       p1h2        p1h3        p1h4        p1h5        p1h6        p1h7        p1h8";
             grid-gap: 10px;
             margin: 10px auto;
             justify-items: center;
@@ -70,7 +70,7 @@
 
         .card-back {
             background-color: rgb(56, 42, 20);
-            width: calc(var(--vert-card-width) - 10px);
+            width: calc(var(--vert-card-height) * .58);
             height: var(--vert-card-height);
             box-sizing: border-box;
         }
@@ -129,13 +129,13 @@
             transform: translate(-50%, -50%);
         }
 
-        @media (orientation: landscape) {
+        @media (min-aspect-ratio: 5/4) {
             header {
                 width: 100vw;
             }
 
             main {
-                margin: 5px 0;
+                margin: 10px 0;
                 width: 100vw;
                 grid-template-columns: repeat(16, var(--horiz-card-width));
                 grid-template-rows: repeat(2, var(--horiz-card-height)) 1fr var(--horiz-card-height) 1fr repeat(2, var(--horiz-card-height));

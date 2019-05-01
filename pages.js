@@ -6,7 +6,6 @@ var pages = [
     'history-table-layout-disadvantages.html',
     'grid-basic-layout',
     'grid-image-cards.html',
-    'grid-scaling-hero.html',
     'grid-hanafuda.html',
     'resources-learning-more.html',
     'jen-simmons.html',
