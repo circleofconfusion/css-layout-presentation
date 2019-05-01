@@ -4,16 +4,7 @@ var pages = [
     'history-table-layout.html',
     'history-table-layout-advantages.html',
     'history-table-layout-disadvantages.html',
-    'positioning-title.html',
-    'positioning-types.html',
-    'positioning-absolute.html',
-    'positioning-example-modal.html',
-    'media-query-title.html',
-    'media-query-types.html',
-    'media-query-form.html',
-    'flexbox-title.html',
-    'flex-image-gallery.html',
-    'grid-title.html',
+    'grid-basic-layout',
     'grid-image-cards.html',
     'grid-scaling-hero.html',
     'grid-hanafuda.html',
@@ -22,5 +13,4 @@ var pages = [
     'rachel-andrew.html',
     'chris-coyier.html',
     'layout-links.html',
-    'questions.html'
 ];
