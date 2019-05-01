@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="pages.js"></script>
+        <script src="navigation.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            section {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        </style>
+    </head>
+
+    <body>
+        <main class="standard">
+            <h1 class="border-bottom">Table Layout &mdash; Tradeoffs</h1>
+            <section>
+                <ul>
+                    <li>It ... worked</li>
+                    <li>Somewhat flexible</li>
+                    <li>Easy to learn</li>
+                    <li>No gotchas when aligning cells</li>
+                </ul>
+                <ul>
+                    <li>Bad for screen readers</li>
+                    <li>Ugly, hard-to-follow code, especially when nested</li>
+                    <li>Can't respond to media queries</li>
+                    <li>Layouts broke down on small devices like phone browsers</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>

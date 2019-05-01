@@ -1,8 +1,7 @@
 var pages = [
     'index.html',
     'history-table-layout.html',
-    'history-table-layout-advantages.html',
-    'history-table-layout-disadvantages.html',
+    'table-layout-tradeoffs.html',
     'grid-basic-layout',
     'grid-image-cards.html',
     'grid-hanafuda.html',
@@ -11,4 +10,5 @@ var pages = [
     'rachel-andrew.html',
     'chris-coyier.html',
     'layout-links.html',
+    'thank-you.html'
 ];
