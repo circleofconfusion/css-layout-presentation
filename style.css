@@ -38,6 +38,7 @@ main.title {
     height: 100vh
 }
 
+div[role="main"].standard,
 main.standard {
     width: 100%;
     max-width: 1000px;
